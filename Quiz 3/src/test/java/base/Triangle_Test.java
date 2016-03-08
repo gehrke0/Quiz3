@@ -28,7 +28,21 @@ public class Triangle_Test {
 
 	@Test
 	public void test() {
-		assertTrue(1==1);
+		assertTrue(1 == 1);
 	}
 
+	double side1 = 1.0;
+	double side2 = 1.0;
+	double side3 = 1.0;
+	double P;
+
+	public void test_getArea() {
+		double Area = Triangle.getArea();
+		assertTrue(Area == 24);
+	}
+
+	public void test_getPerimeter() {
+		double Perim = Triangle.getPerimeter();
+		assertTrue(Perim == 3);
+	}
 }
