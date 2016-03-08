@@ -1,6 +1,4 @@
 package base;
-
-public class GeometricObject {
 	public abstract class GeometricObject {
 		private String color = "white";
 		private boolean filled;
@@ -57,4 +55,3 @@ public class GeometricObject {
 		/** Abstract method getPerimeter */
 		public abstract double getPerimeter();
 	}
-}
