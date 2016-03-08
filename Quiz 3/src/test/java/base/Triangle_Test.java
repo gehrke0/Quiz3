@@ -36,27 +36,21 @@ public class Triangle_Test {
 	double side3 = 1.0;
 	double P;
 
+	@Test
 	public void test_getArea() {
-		Triangle testTri = new Triangle();
-		double Area = Triangle.getArea();
-		assertTrue(Area == 24);
+		Triangle testTri = new Triangle(3.0,4.0,5.0);
+		double Area = testTri.getArea();
+		double expectedArea = 6;
+		assertEquals (expectedArea, Area, .001);
 	}
 
+	@Test
 	public void test_getPerimeter() {
-		Triangle testTri = new Triangle();
-		double Perim = Triangle.getPerimeter();
-		assertTrue(Perim == 3);
+		Triangle testTri = new Triangle(3.0,4.0,5.0);
+		double Perim = testTri.getPerimeter();
+		double expectedPerim = 12.0;
+		assertEquals (expectedPerim, Perim, .001);
 	}
 
-	public void test_getArea2() {
-		Triangle testTri = new Triangle();
-		double Area =  new Triangle.getArea();
-		assertFalse(Area == 20);
-	}
-
-	public void test_getPerimeter2() {
-		Triangle testTri = new Triangle();
-		double Perim = new Triangle.getPerimeter();
-		assertFalse(Perim == 4);
-	}
 }
+

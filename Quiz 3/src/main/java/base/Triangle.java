@@ -10,11 +10,12 @@ public class Triangle extends GeometricObject {
 	}
 
 	public Triangle(double side1, double side2, double side3) {
+		super();
 		this.side1 = side1;
 		this.side2 = side2;
 		this.side3 = side3;
 	}
-	Triangle myTriangle = new Triangle(side1, side2, side3);
+
 	private double getSide1() {
 		return side1;
 	}
@@ -39,17 +40,10 @@ public class Triangle extends GeometricObject {
 		this.side3 = side3;
 	}
 
-	private Triangle getMyTriangle() {
-		return myTriangle;
-	}
-
-	private void setMyTriangle(Triangle myTriangle) {
-		this.myTriangle = myTriangle;
-	}
 
 	public double getArea() {
-	
-		return Math.sqrt(P * (P - side1) * (P - side2) * (P - side3));
+		double hP = this.getPerimeter()/2;
+		return Math.sqrt(hP * (hP - side1) * (hP - side2) * (hP - side3));
 	}
 	public double getPerimeter() {
 		P = side1 + side2 + side3;
